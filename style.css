@@ -549,17 +549,37 @@ li a {
     justify-content: space-between;
 }
 
+
+.reviews_container {
+  overflow: hidden; 
+
+}
+
 .reviews_items {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 32px;
+  display: flex;
+  transition: transform 0.6s ease;
+  gap: 25px;
+  width: 100%; 
 }
 
 .reviews_item {
-    padding: 24px;
-    border: 1px solid #D4DEE1;
-    border-radius: 32px;
-} 
+  flex: 0 0 calc((100% - 64px) / 3);
+}
+
+.review_arrows button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.reviews_item {
+  box-sizing: border-box;
+  padding: 24px;  
+
+  border: 1px solid #D4DEE1;
+  border-radius: 32px;
+}
+
 
 .review_header {
     display: flex;
@@ -623,14 +643,17 @@ li a {
     padding: 13px;
 }
 
+
+
 .review_arrows button img {
     width: 16px;
     height: 16px;
 }
 
-button.review_arrow {
-    background: #13B2C7;
-    color: #FFFFFF;
+
+.review_arrows button.active {
+  background: #13B2C7;
+  color: #fff;
 }
 
 .review_text img{
@@ -702,8 +725,6 @@ button.review_arrow {
 
 }
 
-
-
 .booking_item form button {
     background: #9DBE5D;
     padding: 14.5px;
@@ -720,7 +741,6 @@ button.review_arrow {
 .booking_item form button:hover {
     background: #5c752b;
 }
-
 
 .about {
     margin: 96px 0;
@@ -931,6 +951,12 @@ button.review_arrow {
 .team_item {
     display: flex;
     flex-direction: column;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.team_item:hover {
+    transform: scale(1.02);
 }
 
 .team_name {
@@ -1113,3 +1139,5 @@ footer {
 .footer_nav a:hover {
     color: #0c606c;
 }
+
+

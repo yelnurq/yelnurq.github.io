@@ -6,8 +6,14 @@
     <title>Nova Move</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
 </head>
 <body>
     <div class="header">
@@ -427,97 +433,183 @@
             <section class="reviews" id="reviews">
                 <div class="reviews_container">
                     <div class="reviews_header">
-                        <div class="reviews_title">
-                            <p>Отзывы пациентов</p>
-                        </div>
-                        <div class="review_arrows">
-                            <button><img src="./public/images/ChevronLeft.svg" alt="left"></button>
-                            <button class="review_arrow"><img src="./public/images/ChevronRight.svg" alt="right"></button>
-                        </div>
+                    <div class="reviews_title">
+                        <p>Отзывы пациентов</p>
+                    </div>
+                    <div class="review_arrows">
+                        <button class="prev"><img src="./public/images/ChevronLeft.svg" alt="prev"></button>
+                        <button class="next"><img src="./public/images/ChevronLeft.svg" alt="next"></button>
+                    </div>
                     </div>
                     <div class="reviews_items">
-                        <div class="reviews_item">
-                            <div class="review_header">
-                                <div class="review_user">
-                                    <div class="review_userlogo">
-                                        <p>ЗК</p>
-                                    </div>
-                                    <div class="review_username">
-                                        <p class="review_name">Зере Куандыкова</p>
-                                        <p class="review_date">30 июля 2025</p>
-                                    </div>
-                                </div>
-                                <div class="review_media">
-                                    <img src="./public/images/2gis.png" alt="2gis_logo">
-                                </div>
-                            </div>
-                            <div class="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                            </div>
-                            <div class="review_text">
-                                <p>Благодарю клинику за оказанные услуги, все чисто, уютно и дружелюбно🥹🫶🏼 Однозначно буду постоянным пациентом😅</p>
+                    <div class="reviews_item">
+                        <div class="review_header">
+                        <div class="review_user">
+                            <div class="review_userlogo"><p>ЗК</p></div>
+                            <div class="review_username">
+                            <p class="review_name">Зере Куандыкова</p>
+                            <p class="review_date">30 июля 2025</p>
                             </div>
                         </div>
-                        <div class="reviews_item">
-                            <div class="review_header">
-                                <div class="review_user">
-                                    <div class="review_userlogo">
-                                        <p>АБ</p>
-                                    </div>
-                                    <div class="review_username">
-                                        <p class="review_name">Азамат Байжанов</p>
-                                        <p class="review_date">23 июля 2025</p>
-                                    </div>
-                                </div>
-                                <div class="review_media">
-                                    <img src="./public/images/2gis.png" alt="2gis_logo">
-                                </div>
-                            </div>
-                            <div class="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                            </div>
-                            <div class="review_text">
-                                <p>Чистая и уютная клиника! Записали к Медет Аскаровичу, очень доволен. Провел тщательный осмотр, назначил лечение, подробно объяснил. Профессионализм и обращение к пациентам на высоком уровне</p>
+                        <div class="review_media"><img src="./public/images/2gis.png" alt="2gis_logo"></div>
+                        </div>
+                        <div class="review_star" data-stars="5"></div>
+
+                        <div class="review_text">
+                        <p>Благодарю клинику за оказанные услуги, все чисто, уютно и дружелюбно🥹🫶🏼 Однозначно буду постоянным пациентом😅</p>
+                        </div>
+                    </div>
+                    <div class="reviews_item">
+                        <div class="review_header">
+                        <div class="review_user">
+                            <div class="review_userlogo"><p>АБ</p></div>
+                            <div class="review_username">
+                            <p class="review_name">Азамат Байжанов</p>
+                            <p class="review_date">23 июля 2025</p>
                             </div>
                         </div>
-                        <div class="reviews_item">
-                            <div class="review_header">
-                                <div class="review_user">
-                                    <div class="review_userlogo">
-                                        <p>AT</p>
-                                    </div>
-                                    <div class="review_username">
-                                        <p class="review_name">Almas Taskynbayev</p>
-                                        <p class="review_date">9 июля 2025</p>
-                                    </div>
-                                </div>
-                                <div class="review_media">
-                                    <img src="./public/images/social/insta_black.svg" alt="insta_logo">
-                                </div>
-                            </div>
-                            <div class="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                                <img src="./public/images/review_star.svg" alt="review_star">
-                            </div>
-                            <div class="review_text">
-                                <img src="./public/images/review/Review.png" alt="">
+                        <div class="review_media"><img src="./public/images/2gis.png" alt="2gis_logo"></div>
+                        </div>
+                        <div class="review_star" data-stars="5"></div>
+                        <div class="review_text">
+                        <p>Чистая и уютная клиника! Записали к Медет Аскаровичу, очень доволен. Провел тщательный осмотр, назначил лечение, подробно объяснил. Профессионализм и обращение к пациентам на высоком уровне</p>
+                        </div>
+                    </div>
+                    <div class="reviews_item">
+                        <div class="review_header">
+                        <div class="review_user">
+                            <div class="review_userlogo"><p>AT</p></div>
+                            <div class="review_username">
+                            <p class="review_name">Almas Taskynbayev</p>
+                            <p class="review_date">9 июля 2025</p>
                             </div>
                         </div>
-   
+                        <div class="review_media"><img src="./public/images/social/insta_black.svg" alt="insta_logo"></div>
+                        </div>
+                        <div class="review_star" data-stars="5"></div>
+                        <div class="review_text">
+                        <img src="./public/images/review/Review.png" alt="">
+                        </div>
+                    </div>
+                    <div class="reviews_item">
+                        <div class="review_header">
+                        <div class="review_user">
+                            <div class="review_userlogo"><p>НА</p></div>
+                            <div class="review_username">
+                            <p class="review_name">Нуржан Абдрахманов</p>
+                            <p class="review_date">15 июня 2025</p>
+                            </div>
+                        </div>
+                        <div class="review_media"><img src="./public/images/2gis.png" alt="2gis_logo"></div>
+                        </div>
+                        <div class="review_star" data-stars="5"></div>
+                        <div class="review_text">
+                        <p>Очень понравилось обслуживание! Администраторы вежливые, врачи опытные. Атмосфера располагает к доверию.</p>
+                        </div>
+                    </div>
+                    <div class="reviews_item">
+                        <div class="review_header">
+                        <div class="review_user">
+                            <div class="review_userlogo"><p>ДА</p></div>
+                            <div class="review_username">
+                            <p class="review_name">Динара Ашимова</p>
+                            <p class="review_date">2 июня 2025</p>
+                            </div>
+                        </div>
+                        <div class="review_media"><img src="./public/images/social/insta_black.svg" alt="insta_logo"></div>
+                        </div>
+                        <div class="review_star" data-stars="5"></div>
+                        <div class="review_text">
+                        <p>Замечательная клиника! Очень благодарна врачу за внимание и грамотное лечение.</p>
+                        </div>
+                    </div>
+                    <div class="reviews_item">
+                        <div class="review_header">
+                        <div class="review_user">
+                            <div class="review_userlogo"><p>МА</p></div>
+                            <div class="review_username">
+                            <p class="review_name">Марат Асанов</p>
+                            <p class="review_date">20 мая 2025</p>
+                            </div>
+                        </div>
+                        <div class="review_media"><img src="./public/images/2gis.png" alt="2gis_logo"></div>
+                        </div>
+                        <div class="review_star" data-stars="5"></div>
+                        <div class="review_text">
+                        <p>Я впервые пришёл в эту клинику и остался доволен. Современное оборудование и компетентные врачи.</p>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </section>
+            <script>
+            const items = document.querySelectorAll(".reviews_item");
+            const container = document.querySelector(".reviews_items");
+            const prevBtn = document.querySelector(".prev");
+            const nextBtn = document.querySelector(".next");
+
+            let index = 0;
+            const itemsPerPage = 3;
+            const totalPages = Math.ceil(items.length / itemsPerPage) || 1;
+            const gap = 32; 
+
+
+
+            function setActive(button) {
+            button.classList.add("active"); 
+
+            if (button.classList.contains("prev")) {
+                button.querySelector("img").src = "./public/images/ChevronRight.svg";
+                button.querySelector("img").style.transform = "rotate(180deg)";
+            } else {
+                button.querySelector("img").src = "./public/images/ChevronRight.svg";
+                button.querySelector("img").style.transform = "rotate(0deg)";
+            }
+            }
+
+            function setInactive(button) {
+            button.classList.remove("active"); 
+
+            if (button.classList.contains("prev")) {
+                button.querySelector("img").src = "./public/images/ChevronLeft.svg";
+                button.querySelector("img").style.transform = "rotate(0deg)";
+            } else {
+                button.querySelector("img").src = "./public/images/ChevronLeft.svg";
+                button.querySelector("img").style.transform = "rotate(180deg)";
+            }
+            }
+
+
+
+            function updateArrows() {
+            if (index === 0) {
+                setInactive(prevBtn);
+                setActive(nextBtn);
+            } else if (index === totalPages - 1) {
+                setActive(prevBtn);
+                setInactive(nextBtn);
+            } else {
+                setActive(prevBtn);
+                setActive(nextBtn);
+            }
+            }
+
+            function showSlide(i) {
+            if (i < 0) index = 0;
+            else if (i >= totalPages) index = totalPages - 1;
+            else index = i;
+
+            const shiftPercent = index * 100;
+            container.style.transform = `translateX(-${shiftPercent}%)`;
+
+            updateArrows();
+            }
+
+            prevBtn.addEventListener("click", () => showSlide(index - 1));
+            nextBtn.addEventListener("click", () => showSlide(index + 1));
+
+            showSlide(0);
+            </script>
             <section class="booking" id="booking">
                 <div class="booking_container">
                     <div class="booking_items">
@@ -652,11 +744,21 @@ Nova Move — это пространство, где забота о тел�
                         <p>Галерея</p>
                     </div>
                     <div class="gallery_items">
-                        <img src="./public/images/gallery/img1.png" class="gallery1" alt="gallery">
-                        <img src="./public/images/gallery/img2.jpg" class="gallery2" alt="gallery">
-                        <img src="./public/images/gallery/img3.jpg" class="gallery3" alt="gallery">
-                        <img src="./public/images/gallery/img4.jpg" class="gallery4" alt="gallery">
-                        <img src="./public/images/gallery/img5.jpg" class="gallery5" alt="gallery">
+                    <a href="./public/images/gallery/img1.png" data-fancybox="gallery" class="gallery1">
+                        <img src="./public/images/gallery/img1.png"  alt="gallery">
+                    </a>
+                    <a href="./public/images/gallery/img2.jpg" data-fancybox="gallery" class="gallery2" >
+                        <img src="./public/images/gallery/img2.jpg" alt="gallery">
+                    </a>
+                    <a href="./public/images/gallery/img3.jpg" data-fancybox="gallery" class="gallery3" >
+                        <img src="./public/images/gallery/img3.jpg" alt="gallery">
+                    </a>
+                    <a href="./public/images/gallery/img4.jpg" data-fancybox="gallery" class="gallery4" >
+                        <img src="./public/images/gallery/img4.jpg" alt="gallery">
+                    </a>
+                    <a href="./public/images/gallery/img5.jpg" data-fancybox="gallery" class="gallery5" >
+                        <img src="./public/images/gallery/img5.jpg" alt="gallery">
+                    </a>
                     </div>
 
                 </div>
@@ -668,62 +770,70 @@ Nova Move — это пространство, где забота о тел�
                     </div>
                     <div class="team_items">
                         <div class="team_item">
+                            <a href="./public/images/team/img1.png" data-fancybox="team" data-caption="Рузимат Курваналиев — Врач-реабилитолог">
                             <img src="./public/images/team/img1.png" alt="team">
-                            <p class="team_name">
-                                Рузимат Курваналиев
-                            </p>
+                            </a>
+                            <p class="team_name">Рузимат Курваналиев</p>
                             <p class="team_job">Врач-реабилитолог</p>
                         </div>
+
                         <div class="team_item">
+                            <a href="./public/images/team/img2.png" data-fancybox="team" data-caption="Айгерім Ергешбай — Врач-реабилитолог">
                             <img src="./public/images/team/img2.png" alt="team">
-                            <p class="team_name">
-                                Айгерім Ергешбай
-                            </p>
+                            </a>
+                            <p class="team_name">Айгерім Ергешбай</p>
                             <p class="team_job">Врач-реабилитолог</p>
                         </div>
+
                         <div class="team_item">
+                            <a href="./public/images/team/img3.png" data-fancybox="team" data-caption="Бакир Абашев — Врач-реабилитолог">
                             <img src="./public/images/team/img3.png" alt="team">
-                            <p class="team_name">
-                                Бакир Абашев
-                            </p>
+                            </a>
+                            <p class="team_name">Бакир Абашев</p>
                             <p class="team_job">Врач-реабилитолог</p>
                         </div>
+
                         <div class="team_item">
+                            <a href="./public/images/team/img4.png" data-fancybox="team" data-caption="Адилхан Сатыбалдиев — Врач-реабилитолог">
                             <img src="./public/images/team/img4.png" alt="team">
-                            <p class="team_name">
-                                Адилхан Сатыбалдиев
-                            </p>
+                            </a>
+                            <p class="team_name">Адилхан Сатыбалдиев</p>
                             <p class="team_job">Врач-реабилитолог</p>
                         </div>
+
                         <div class="team_item">
+                            <a href="./public/images/team/img5.png" data-fancybox="team" data-caption="Рабиға Ахмет — Администратор центра">
                             <img src="./public/images/team/img5.png" alt="team">
-                            <p class="team_name">
-                                Рабиға Ахмет
-                            </p>
+                            </a>
+                            <p class="team_name">Рабиға Ахмет</p>
                             <p class="team_job">Администратор центра</p>
                         </div>
+
                         <div class="team_item">
+                            <a href="./public/images/team/img6.png" data-fancybox="team" data-caption="Асхат Төлегенұлы — Врач-реабилитолог">
                             <img src="./public/images/team/img6.png" alt="team">
-                            <p class="team_name">
-                                Асхат Төлегенұлы
-                            </p>
+                            </a>
+                            <p class="team_name">Асхат Төлегенұлы</p>
                             <p class="team_job">Врач-реабилитолог</p>
                         </div>
+
                         <div class="team_item">
+                            <a href="./public/images/team/img7.png" data-fancybox="team" data-caption="Медет Кадирбеков — Врач-реабилитолог">
                             <img src="./public/images/team/img7.png" alt="team">
-                            <p class="team_name">
-                                Медет Кадирбеков
-                            </p>
+                            </a>
+                            <p class="team_name">Медет Кадирбеков</p>
                             <p class="team_job">Врач-реабилитолог</p>
                         </div>
+
                         <div class="team_item">
+                            <a href="./public/images/team/img8.png" data-fancybox="team" data-caption="Дана Қанатқалиқызы — Администратор центра">
                             <img src="./public/images/team/img8.png" alt="team">
-                            <p class="team_name">
-                                Дана Қанатқалиқызы
-                            </p>
+                            </a>
+                            <p class="team_name">Дана Қанатқалиқызы</p>
                             <p class="team_job">Администратор центра</p>
                         </div>
-                    </div>
+                        </div>
+
                 </div>
             </section>
             <section class="contacts" id="contacts">
@@ -837,4 +947,5 @@ Nova Move — это пространство, где забота о тел�
         </div>
     </footer>
 </body>
+
 </html>
