@@ -150,11 +150,11 @@ li a {
 
   .header_main {
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 0;
     width: 100%;
     background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow:0 18px 32px rgba(0, 0, 0, 0.05);
     flex-direction: column;
     gap: 15px;
     overflow: hidden;
@@ -179,10 +179,13 @@ li a {
     padding: 0 20px;
     margin: 0;
     flex-wrap: wrap;
+
   }
   .header_items {
     padding-bottom: 30px;
-  }
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+}
   .header_main {
     padding: 0;
     display: flex;
@@ -397,7 +400,7 @@ li a {
     align-items: center;
     justify-content: left;
     padding: 0;
-    gap: 20px;
+    gap: 10px 20px;
     margin: 0;
     margin-bottom: 16px;
     flex-wrap: wrap;
@@ -568,6 +571,7 @@ li a {
     font-size: 16px;
     font-weight: 500;
     border: none;
+    background: #EDF2F3;
     font-family: "Roboto";
     border-radius: 100px;
     padding: 12px 26.5px;
@@ -1264,7 +1268,9 @@ footer {
     .whyus_items {
         grid-template-columns: repeat(2,1fr);
     }
-
+    .price_item {
+        width: 50%;
+    }
   .about_desc p {
       width: 100%;
   }
@@ -1379,6 +1385,9 @@ footer {
 @media (max-width: 900px) {
     .group_img {
         height: 400px;
+    }
+        .price_item {
+        width: 100%;
     }
 }
 @media (max-width: 768px) {
