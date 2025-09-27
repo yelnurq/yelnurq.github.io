@@ -351,7 +351,7 @@ burger.addEventListener('click', () => {
                             </div>
                             <div class="process_itemdesc">
                                 <p>
-Отслеживаем прогресс, корректируем нагрузки и помогаем сохранить эффект в повседневной жизни                                </p>
+Отслеживаем прогресс, корректируем нагрузки и помогаем сохранить эффект в повседневной жизни                                </p>
                             </div>
                         </div>
 
@@ -376,7 +376,10 @@ burger.addEventListener('click', () => {
                                 <button class="price_button2">Полный курс</button>
                             </div>
                         </div>
-                        <div class="price_summary">
+                        
+
+
+                    <div class="price_summary price_summary1">
 
                         <details>
                             <summary>
@@ -435,9 +438,52 @@ burger.addEventListener('click', () => {
                             </summary>
                         </details>
                         </div>
+                        <div class="price_summary price_summary2" style="display: none;">
+                        <details>
+                        <summary>Полный курс реабилитации <span class="arrow">⏶</span></summary>
+                        <div class="price_content">
+                            <table>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Цена</th>
+                                <th>Льготная цена*</th>
+                            </tr>
+                            <tr>
+                                <td>Полный курс восстановления</td>
+                                <td>100 000 ₸</td>
+                                <td>90 000 ₸</td>
+                            </tr>
+                            </table>
+                        </div>
+                        </details>
                     </div>
                 </div>
             </section>
+            <script>
+            const priceButtons = document.querySelectorAll(".price_buttons button");
+            const summary1 = document.querySelector(".price_summary1");
+            const summary2 = document.querySelector(".price_summary2");
+
+            priceButtons[0].classList.add("active");
+            summary1.style.display = "block";
+            summary2.style.display = "none";
+
+            priceButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                button.parentElement.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                if(button.classList.contains("price_button1")){
+                summary1.style.display = "block";
+                summary2.style.display = "none";
+                } else {
+                summary1.style.display = "none";
+                summary2.style.display = "block";
+                }
+            });
+            });
+            </script>
+
             <section class="reviews" id="reviews">
                 <div class="reviews_container">
                     <div class="reviews_header">
