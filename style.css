@@ -364,7 +364,7 @@ li a {
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
-    width: 280px;
+    word-break: break-word;
 }
 
 
@@ -1001,7 +1001,7 @@ li a {
 .blog_otherDesc p{
     color: #444E50;
     font-size: 16px;
-    line-height: 125%;
+    line-height: 125%;    word-break: break-all;
 }
 
 .gallery {
@@ -1147,10 +1147,13 @@ li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;  
-  height: 56px;
+  padding: 15px;
   border-radius: 50%;
   background: #128EA826;
+}
+
+.contact_tool p {
+    word-break: break-word;
 }
 
 .contact_icon img {
@@ -1666,6 +1669,11 @@ footer {
   .whyus_items {
     grid-template-columns: auto;
     display: flex;
+    flex-wrap: wrap;
+  }
+  .social_items {
+    justify-content:space-between;
+    gap: 8px;
     flex-wrap: wrap;
   }
 }
