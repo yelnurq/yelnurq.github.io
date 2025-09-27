@@ -16,49 +16,57 @@
 
 </head>
 <body>
-    <div class="header">
-        <div class="header_container">
-            <div class="header_logo">
-                <img src="./public/images/logo.png" alt="header_logo">
-                <p class="logo_text">
-                    Nova Move
-                </p>
-            </div>
-            <div class="header_nav">
-                <ul>
-                    <li>
-                        <a href="#whyus">Почему мы</a>
-                    </li>
-                    <li>
-                        <a href="#services">Услуги</a>
-                    </li>
-                    <li>
-                        <a href="#price">Цены</a>
-                    </li>
-                    <li>
-                        <a href="#reviews">Отзывы</a>
-                    </li>
-                    <li>
-                        <a href="#about">О нас</a>
-                    </li>
-                    <li>
-                        <a href="#blogs">Блог</a>
-                    </li>
-                    <li>
-                        <a href="#contacts">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="header_items">
-                <div class="header_phone">
-                    <a href="tel:+77753550845">8 775 355 0845</a>
-                </div>
-                <div class="header_button">
-                    <a href="tel:+77753550845">Связаться с нами</a>
-                </div>
-            </div>
-        </div>
+<div class="header">
+  <div class="header_container">
+    <div class="header_logo">
+      <img src="./public/images/logo.png" alt="header_logo">
+      <p class="logo_text">Nova Move</p>
     </div>
+
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="header_main">
+      <div class="header_nav">
+        <ul>
+          <li><a href="#whyus">Почему мы</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#price">Цены</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#blogs">Блог</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="header_items">
+        <div class="header_phone">
+          <a href="tel:+77753550845">8 775 355 0845</a>
+        </div>
+        <div class="header_button">
+          <a href="tel:+77753550845">Связаться с нами</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const burger = document.querySelector('.burger');
+const headerMain = document.querySelector('.header_main');
+
+burger.addEventListener('click', () => {
+  headerMain.classList.toggle('active'); // раскрытие nav + items
+  burger.classList.toggle('open');       // анимация бургера
+});
+</script>
+
+
+
+
     <div class="main">
         <div class="hero">
             <div class="hero_container">
@@ -543,6 +551,8 @@
                 </div>
             </section>
             <script>
+       
+
             const items = document.querySelectorAll(".reviews_item");
             const container = document.querySelector(".reviews_items");
             const prevBtn = document.querySelector(".prev");
@@ -609,6 +619,20 @@
             nextBtn.addEventListener("click", () => showSlide(index + 1));
 
             showSlide(0);
+
+            
+            </script>
+            <script>
+                     const isMobile = window.innerWidth <= 768;
+
+            if (!isMobile) {
+                prevBtn.addEventListener("click", () => showSlide(index - 1));
+                nextBtn.addEventListener("click", () => showSlide(index + 1));
+                showSlide(0);
+            } else {
+                container.style.transform = "none";
+            }
+
             </script>
             <section class="booking" id="booking">
                 <div class="booking_container">
@@ -637,7 +661,7 @@
                 <div class="about_container">
                     <div class="about_items">
                         <div class="about_item">
-                            <img src="./public/images/group.png" alt="group">
+                            <img src="./public/images/group.png" class="group_img" alt="group">
                         </div>
                         <div class="about_item">
                             <div class="about_title">
