@@ -1274,9 +1274,7 @@ footer {
   .about_desc p {
       width: 100%;
   }
-  .reviews_items {
-    gap:10px;
-  }
+
   .services_items {
     grid-template-columns: repeat(2,1fr);
   }
@@ -1509,7 +1507,7 @@ footer {
       gap: 24px;
   }
   .booking_item form {
-      padding: 20px;
+      padding: 30px 20px;
   }
 
   .about_items {
